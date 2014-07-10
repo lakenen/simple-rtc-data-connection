@@ -7,13 +7,12 @@ function SimpleDataConnection(relay, offer) {
 
     this.dataConnection = new DataConnection();
     dataConnection = this.dataConnection;
+    this.relay = relay;
 
     relay.on('answer', function (answer) {
-        console.log(answer);
         dataConnection.setDescription(answer);
     });
     relay.on('candidate', function (candidate) {
-        console.log(candidate);
         dataConnection.addCandidate(candidate);
     });
 
@@ -49,6 +48,10 @@ function SimpleDataConnection(relay, offer) {
 }
 SimpleDataConnection.prototype = Object.create(EventEmitter.prototype);
 SimpleDataConnection.prototype.constructor = SimpleDataConnection;
+SimpleDataConnection.prototype.close = function () {
+    this.relay.off();
+    this.dataConnection.close();
+};
 SimpleDataConnection.prototype.send = function () {
     if (typeof arguments[0] === 'string') {
         data = JSON.stringify({
