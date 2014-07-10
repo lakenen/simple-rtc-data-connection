@@ -1,0 +1,24 @@
+{
+  "name": "simple-rtc-data-connection",
+  "description": "An even more simplified version of rtc-data-connection",
+  "version": "0.0.0",
+  "author": "Cameron Lakenen <cameron@lakenen.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lakenen/simple-rtc-data-connection.git"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.githubusercontent.com/lakenen/simple-rtc-data-connection/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/lakenen/simple-rtc-data-connection/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "eemitter": "^0.2.0"
+  }
+}
