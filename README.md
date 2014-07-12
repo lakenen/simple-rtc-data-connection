@@ -13,8 +13,7 @@ npm install simple-rtc-data-connection
 ## Usage
 
 ```
-
-
+// TODO: write usage docs ಠ_ಠ
 ```
 
 
